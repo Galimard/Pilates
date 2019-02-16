@@ -1051,3 +1051,89 @@ input[type='radio'].visually-hidden {
     font-size: 27.96px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
 }
+
+/*-----------------------------------------------------------------reviews-------------------------------------------------------------*/
+
+.reviews {
+    padding: 30px 100px;
+}
+
+.reviews-slider {
+    margin: 70px auto 0;
+    width: 975px;
+    height: 395px;
+    background: url("../images/circles3.png") 805px 50px no-repeat;
+}
+
+.slide2, .slide3 {
+    display: none;
+}
+
+.reviews-slide {
+    border-radius: 4px;
+    box-shadow: 0px 9px 23px 9px rgba(33, 33, 33, 0.04);
+    width: 977px;
+    height: 100%;
+    padding-left: 140px;
+    padding-right: 170px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.reviews-slide-wrap {
+    float: left;
+    margin-right: 55px;
+    width: 185px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.reviews-slide-wrap__img {
+    width: 100%;
+}
+
+.reviews-slide-text__name, .reviews-slide-text-info__age {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color:  #000000;
+    font-size: 27.95px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+}
+
+.reviews-slide-text-info {
+    margin: 10px 0 30px;
+}
+
+.reviews-slide-text-info__age {
+    font-size: 18px;
+    float: left;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.reviews-slide-text-info-socials {
+    display: inline-block;
+    width: 100px;
+}
+
+.reviews-slide-text-info-socials__link {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+}
+
+.reviews-slide-text-info-socials__vk {
+    background: url("../images/vk.png") center center no-repeat;
+}
+
+.reviews-slide-text-info-socials__inst {
+    background: url("../images/instagram.png") center center no-repeat;
+}
+
+.reviews-slide-text__review {
+    color:  #000000;
+    font-size: 15.97px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 23px;
+}
