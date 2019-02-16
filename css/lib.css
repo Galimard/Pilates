@@ -570,6 +570,20 @@ input[type='radio'].visually-hidden {
     font-size: 49px;/* Приближение из-за подстановки шрифтов */
     font-weight: 400;
     margin: 0;
+    position: relative;
+    padding-left: 55px;
+    line-height: 40px;
+}
+
+.title::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 20px;
+    left: 0;
 }
 
 .text {
@@ -762,7 +776,30 @@ input[type='radio'].visually-hidden {
     font-size: 0.85rem;
     font-weight: 700;
     float: right;
+    position: relative;
 }
+
+/*подчеркивание с края*/
+.header-top-tel::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 0;
+    background: #000000;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.header-top-tel:hover::after {
+    width: 100%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+/*конец подчеркивания*/
 
 .header-text {
     width: 350px;
@@ -790,4 +827,63 @@ input[type='radio'].visually-hidden {
 .header__btn {
     width: 250px;
     font-size: 0.85rem;
+}
+
+/*-----------------------------------------------------------------about-------------------------------------------------------------*/
+
+.about {
+    padding: 30px 100px;
+    background: url("../images/photo2.png") 430px 380px no-repeat, url("../images/photo1.png") 645px 60px no-repeat, url("../images/circles.png") 525px 260px no-repeat;
+    min-height: 800px;
+}
+
+.about__wrap {
+    width: 390px;
+}
+
+.about__text {
+    margin: 65px 0 35px;
+}
+
+.about__btn {
+    display: inline-block;
+    color:  #2a4f37;
+    font-size: 14.01px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 38px;
+    position: relative;
+}
+
+/*css стрелка*/
+.about__btn::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 14px;
+    background: url("../images/arrow-green.png") no-repeat center center;
+    /*border-bottom: 2px solid #2a4f37;*/
+    /*border-right: 2px solid #2a4f37;*/
+    /*-webkit-transform: rotate(-45deg);*/
+    /*-moz-transform: rotate(-45deg);*/
+    /*-ms-transform: rotate(-45deg);*/
+    /*-o-transform: rotate(-45deg);*/
+    /*transform: rotate(-45deg);*/
+    position: absolute;
+    top: 2px;
+    right: -20px;
+}
+
+.about__btn:hover::after {
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
