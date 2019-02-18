@@ -1187,3 +1187,71 @@ input[type='radio'].visually-hidden {
     font-weight: 300;
     line-height: 23px;
 }
+
+/*-----------------------------------------------------------------contacts-------------------------------------------------------------*/
+
+.contacts-title {
+    margin: 30px 100px;
+}
+
+.contacts-address {
+    width: 310px;
+    height: 355px;
+    background-color:  #91aa59;
+    box-shadow: 0px 6px 15px 0px rgba(33, 33, 33, 0.2);
+    padding: 65px 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contacts-address__title {
+    color:  #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.contacts-address__text {
+    color:  #ffffff;
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-bottom: 28px;
+}
+
+.contacts-address__text:last-child {
+    margin-bottom: 0;
+}
+
+.contacts-address__border {
+    position: relative;
+}
+
+.contacts-address__border::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    top: 17px;
+    left: 0;
+}
+
+.contacts-address__border:hover::after {
+    width: 100%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+
+.contacts-address__email {
+    border-bottom: 1px solid #fff;
+}
+
+.contacts-map {
+    width: 100%;
+    height: 515px;
+}
