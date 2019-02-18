@@ -1055,7 +1055,7 @@ input[type='radio'].visually-hidden {
 /*-----------------------------------------------------------------reviews-------------------------------------------------------------*/
 
 .reviews {
-    padding: 30px 100px;
+    padding: 30px 100px 105px;
 }
 
 .reviews-slider {
@@ -1063,10 +1063,57 @@ input[type='radio'].visually-hidden {
     width: 975px;
     height: 395px;
     background: url("../images/circles3.png") 805px 50px no-repeat;
+    position: relative;
 }
 
 .slide2, .slide3 {
     display: none;
+}
+
+.reviews-slider__prev {
+    display: block;
+    width: 21px;
+    height: 37px;
+    background: url("../images/arrow-left.png") no-repeat center center;
+    position: absolute;
+    top: 45%;
+    left: -94px;
+}
+
+.reviews-slider__prev:hover {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.reviews-slider__next {
+    display: block;
+    width: 21px;
+    height: 37px;
+    background: url("../images/arrow-right.png") no-repeat center center;
+    position: absolute;
+    top: 45%;
+    right: -94px;
+}
+
+.reviews-slider__next:hover {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .reviews-slide {
@@ -1076,6 +1123,7 @@ input[type='radio'].visually-hidden {
     height: 100%;
     padding-left: 140px;
     padding-right: 170px;
+    padding-top: 95px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1084,6 +1132,7 @@ input[type='radio'].visually-hidden {
 .reviews-slide-wrap {
     float: left;
     margin-right: 55px;
+    margin-top: 14px;
     width: 185px;
     height: 180px;
     overflow: hidden;
@@ -1114,13 +1163,14 @@ input[type='radio'].visually-hidden {
 
 .reviews-slide-text-info-socials {
     display: inline-block;
-    width: 100px;
+    width: 39px;
 }
 
 .reviews-slide-text-info-socials__link {
     display: inline-block;
     width: 17px;
     height: 17px;
+    vertical-align: bottom;
 }
 
 .reviews-slide-text-info-socials__vk {
@@ -1133,7 +1183,7 @@ input[type='radio'].visually-hidden {
 
 .reviews-slide-text__review {
     color:  #000000;
-    font-size: 15.97px;/* Приближение из-за подстановки шрифтов */
+    font-size: 1rem;
     font-weight: 300;
     line-height: 23px;
 }
