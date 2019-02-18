@@ -610,7 +610,7 @@ input[type='radio'].visually-hidden {
 /*-----------------------------------------------------------------header-------------------------------------------------------------*/
 
 .header {
-    background: url("../images/circle-big.png") top left no-repeat, /*url("../images/circle-middle.png") 760px center no-repeat, */ url("../images/circle-small.png") 1150px 50px no-repeat;
+    background: url("../images/circle-big.png") top left no-repeat /*url("../images/circle-middle.png") 760px center no-repeat, */ /*url("../images/circle-small.png") 1150px 50px no-repeat*/;
     min-height: 800px;
     padding: 30px 100px;
     position: relative;
@@ -665,6 +665,10 @@ input[type='radio'].visually-hidden {
     height: 100px;
 }
 
+.header-top-logo {
+    margin-right: 42%;
+}
+
 .header-top-logo, .footer-logo {
     width: 65px;
     height: 60px;
@@ -681,7 +685,7 @@ input[type='radio'].visually-hidden {
 }
 
 .header-top-burger {
-    width: 980px;
+    /*width: 980px;*/
     float: left;
 }
 
@@ -1329,4 +1333,68 @@ input[type='radio'].visually-hidden {
 
 .footer-socials__inst {
     background: url("../images/instagram.png") center center no-repeat;
+}
+
+/*--------------------------------------------------адаптив --------------------------------------------------*/
+
+@media all and (max-width: 1140px) {
+
+    .header {
+        /*min-height: 750px;*/
+        padding: 23px 60px;
+        background-position: -90px 0;
+        background-size: 67%;
+    }
+
+    .header__img {
+        width: 890px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .header-text__title {
+        font-size: 48px;
+    }
+
+    .header-text {
+        margin-top: 60px;
+    }
+
+}
+
+@media all and (max-width: 998px) {
+
+    .header__img {
+        width: 800px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+}
+
+@media all and (max-width: 762px) {
+
+    .header {
+        min-height: 660px;
+        padding: 23px 60px;
+        background-position: -90px 0;
+        background-size: 78%;
+    }
+
+    .header__img {
+        width: 725px;
+        height: 630px;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-position: 40px 30px;
+    }
+
+    .header-text__title {
+        font-size: 48px;
+    }
+
+    .header-text {
+        margin-top: 60px;
+    }
+
 }
