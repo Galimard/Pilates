@@ -9,12 +9,12 @@
 $(document).ready(function() {
 
     //бургер меню
-    if($('.header-menu__burger') && $('.header-menu__burger').length > 0 && $('.header-menu__span') && $('.header-menu__span').length > 0) {
+    if($('.header-top-burger__wrap') && $('.header-top-burger__wrap').length > 0) {
 
-        $('.header-menu__burger, .header-menu__span').on('click', function(event) {
+        $('.header-top-burger__wrap').on('click', function(event) {
             event.preventDefault();
 
-            var menu = $('.header-menu__navigation'),
+            var menu = $('.header-menu'),
                 display = String(menu.css('display'));
 
             if(display === 'none') {
@@ -24,11 +24,61 @@ $(document).ready(function() {
             }
 
             //крестик
-            $('.header-menu__burger').toggleClass('header-menu__cross');
+            $('.header-top-burger__wrap').toggleClass('header-top__cross');
             $('.line__main').toggleClass('burger-line2');
             $('.line__middle').toggleClass('burger-line3');
 
         });
     }
+
+    //скролл меню
+    $('.header-menu__item').on('click', function() {
+        var elementClick = String($(this).children().attr("href")),
+            destination = $(elementClick).offset().top;
+        $("html, body").animate({
+            scrollTop: destination
+        }, 800);
+    });
+
+    //скролл кнопки в хедере
+    $('.header__btn').on('click', function() {
+        var elementClick = $(this).attr("href"),
+            destination = $(elementClick).offset().top;
+        $("html, body").animate({
+            scrollTop: destination
+        }, 800);
+    });
+
+    //reviews-slider слайдер
+    // if($('.reviews-slider') && $('.reviews-slider').length > 0) {
+    //     $('.reviews-slider').slick({
+    //         arrows: true,
+    //         prevArrow: '<a href="#" class="reviews-slider__prev"></a>',
+    //         nextArrow: '<a href="#" class="reviews-slider__next"></a>',
+    //         appendDots: $('.reviews-slider-dots'),
+    //         infinite: true,
+    //         dots: true,
+    //         // autoplay: true,
+    //         autoplaySpeed: 3000
+    //     });
+    // }
+
+    //карта яндекс
+    ymaps.ready(init);
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            center: [52.27397178, 104.31959694],
+            zoom: 17
+        });
+        var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'images/marker.png',
+            iconImageSize: [24, 35],
+            iconImageOffset: [-15, -40]
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+
 
 });

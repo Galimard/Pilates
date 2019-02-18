@@ -540,8 +540,8 @@ input[type='radio'].visually-hidden {
 }
 
 .shine:hover::before {
-    -webkit-animation: shine .8s;
-    animation: shine .8s;
+    /*-webkit-animation: shine .8s;*/
+    /*animation: shine .8s;*/
     opacity: 1;
 }
 
@@ -640,7 +640,7 @@ input[type='radio'].visually-hidden {
     left: 760px;
     top: 20%;
     z-index: -2;
-    animation: move 3s infinite linear;
+    /*animation: move 3s infinite linear;*/
 }
 
 @keyframes move {
@@ -752,6 +752,10 @@ input[type='radio'].visually-hidden {
 .header-menu {
     display: none;
     background: #697645;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
 }
 
 .header-menu__item {
@@ -1066,6 +1070,11 @@ input[type='radio'].visually-hidden {
     position: relative;
 }
 
+.slick-list {
+    width: 975px;
+    height: 395px;
+}
+
 .slide2, .slide3 {
     display: none;
 }
@@ -1127,6 +1136,11 @@ input[type='radio'].visually-hidden {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    /*outline: 1px solid red;*/
+}
+
+.reviews .slick-dots {
+    position: static;
 }
 
 .reviews-slide-wrap {
@@ -1217,6 +1231,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 100px;
     left: 100px;
+    z-index: 10;
 }
 
 .contacts-address__title {
