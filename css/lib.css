@@ -1517,9 +1517,16 @@ input[type='radio'].visually-hidden {
         background-size: 78%;
     }
 
-    .button__arrow::after, .header-text__span {
+    .header-text__span, .header .button__arrow::after {
         display: none;
     }
+
+    .button__arrow::after {
+        width: 32px;
+        background: url("../images/arrow-long.png") right center no-repeat;
+        top: 9px;
+        right: -16px;
+    },
 
     .header__img {
         width: 600px;
@@ -1535,7 +1542,7 @@ input[type='radio'].visually-hidden {
 
     .about {
         padding: 23px 60px;
-        min-height: 550px;
+        min-height: 520px;
     }
 
     .about::before {
@@ -1561,6 +1568,56 @@ input[type='radio'].visually-hidden {
         margin-top: 50px;
     }
 
+    .schedule {
+        padding: 23px 60px;
+    }
+
+    .schedule-blocks {
+        margin-top: 50px;
+        height: 370px;
+        margin-bottom: 0;
+    }
+
+    .schedule-blocks__item {
+        width: 205px;
+        height: 370px;
+        padding: 100px 25px 0;
+    }
+
+    .schedule-blocks__first, .schedule-blocks__second {
+        margin-right: 13px;
+    }
+
+    .schedule-blocks__first::after, .schedule-blocks__second::after, .schedule-blocks__third::after {
+        font-size: 115px;
+        left: 55px;
+    }
+
+    .schedule-blocks__title {
+        font-size: 12px;
+    }
+
+    .schedule-blocks-title__span {
+        font-size: 18px;
+    }
+
+    .schedule-blocks__subtitle {
+        font-size: 16px;
+        margin: 15px 0 20px;
+    }
+
+    .schedule-blocks__text {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .schedule__btn {
+        width: 130px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 26px;
+        margin-top: 30px;
+    }
 }
 
 @media all and (max-width: 700px) {
