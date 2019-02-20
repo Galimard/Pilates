@@ -9,6 +9,7 @@
 $(document).ready(function() {
 
     //бургер меню
+    debugger
     if($('.header-top-burger__wrap') && $('.header-top-burger__wrap').length > 0) {
 
         $('.header-top-burger__wrap').on('click', function(event) {
@@ -79,6 +80,18 @@ $(document).ready(function() {
         });
         myMap.geoObjects.add(myPlacemark);
     }
+
+    function factorial(n) {
+        var result = 0;
+        if (n > 1) {
+            result = n * factorial(n-1);
+            return result;
+        } else {
+            return 1;
+        }
+    }
+    factorial(10);
+
 
 
 });
