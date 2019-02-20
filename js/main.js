@@ -9,7 +9,7 @@
 $(document).ready(function() {
 
     //бургер меню
-    debugger
+
     if($('.header-top-burger__wrap') && $('.header-top-burger__wrap').length > 0) {
 
         $('.header-top-burger__wrap').on('click', function(event) {
@@ -36,6 +36,23 @@ $(document).ready(function() {
     $('.header-menu__item').on('click', function() {
         var elementClick = String($(this).children().attr("href")),
             destination = $(elementClick).offset().top;
+        $("html, body").animate({
+            scrollTop: destination
+        }, 800);
+    });
+
+    //paginator
+    $('.paginator-link').on('click', function() {
+        var elementClick = String($(this).attr("href")),
+               destination = $(elementClick).offset().top;
+
+        $('.paginator-link--active').removeClass('paginator-link--active').addClass('paginator-link');
+        $(this).addClass('paginator-link--active');
+
+        if($('.paginator-list a').hasClass('paginator-link--active')) {
+            $('.paginator-span').toggleClass('.paginator-span--nonactive');
+        }
+
         $("html, body").animate({
             scrollTop: destination
         }, 800);
