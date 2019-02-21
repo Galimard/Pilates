@@ -1729,6 +1729,10 @@ input[type='radio'].visually-hidden {
         margin-bottom: 0;
     }
 
+    .contacts-title {
+        margin: 30px 60px;
+    }
+
 }
 
 @media all and (max-width: 998px) {
@@ -1787,6 +1791,7 @@ input[type='radio'].visually-hidden {
         width: 248px;
         height: 285px;
         padding: 30px 35px;
+        left: 50px;
     }
 
     .contacts-address__title {
@@ -1794,6 +1799,9 @@ input[type='radio'].visually-hidden {
         margin-bottom: 8px;
     }
 
+    .footer-copyright {
+        margin-right: 30%;
+    }
 }
 
 @media all and (max-width: 900px) {
@@ -1848,6 +1856,10 @@ input[type='radio'].visually-hidden {
     .block1::after {
         top: -165px;
         left: 255px;
+    }
+
+    .footer-copyright {
+        margin-right: 25%;
     }
 
 }
@@ -2040,6 +2052,23 @@ input[type='radio'].visually-hidden {
         background-size: contain;
         top: -63px;
         left: -366px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-logo {
+        width: 43px;
+        overflow: hidden;
+    }
+
+    .footer-logo__img {
+        width: 100%;
+    }
+
+    .header-top-logo__text {
+        font-size: 8px;
     }
 
 }
