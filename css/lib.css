@@ -1109,7 +1109,8 @@ input[type='radio'].visually-hidden {
 /*-----------------------------------------------------------------lessons-------------------------------------------------------------*/
 
 .lessons {
-    min-height: 2425px;
+    min-height: 2520px;
+    /*min-height: 2425px;*/
     padding: 30px 100px;
     /*background: url("../images/lesson1.png") 650px 20px no-repeat, url("../images/lesson2.png") 200px 550px no-repeat, url("../images/lesson3.png") 650px 1350px no-repeat, url("../images/lesson4.png") 100px 1920px no-repeat ;*/
 }
@@ -1187,6 +1188,7 @@ input[type='radio'].visually-hidden {
 
 .lessons__title {
     margin-bottom: 215px;
+    margin-top: 100px;
 }
 
 .lessons-block__title {
@@ -1268,8 +1270,8 @@ input[type='radio'].visually-hidden {
 
 .reviews-slide {
     border-radius: 4px;
-    box-shadow: 0px 9px 23px 9px rgba(33, 33, 33, 0.04);
-    width: 977px;
+    box-shadow: 0 9px 23px 9px rgba(33, 33, 33, 0.04);
+    width: 100%;
     height: 100%;
     padding-left: 140px;
     padding-right: 170px;
@@ -1559,6 +1561,114 @@ input[type='radio'].visually-hidden {
         display: none;
     }
 
+    .block1::after {
+        top: -225px;
+        left: 400px;
+        width: 350px;
+        height: 450px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .block2, .block4 {
+        margin-right: 30px;
+    }
+
+    .block2::after {
+        top: -200px;
+        left: -470px;
+        width: 350px;
+        height: 450px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .block3::after {
+        left: 405px;
+        width: 450px;
+        height: 350px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .block4::after {
+        top: -130px;
+        left: -460px;
+        width: 450px;
+        height: 350px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .reviews {
+        padding-bottom: 70px;
+    }
+
+    .reviews-slider {
+        width: 515px;
+        height: 210px;
+        background: url(../images/circles3.png) 457px 20px no-repeat;
+        background-size: 41px;
+    }
+
+    .reviews-slide {
+        padding-left: 30px;
+        padding-right: 60px;
+        padding-top: 20px;
+    }
+
+    .reviews-slide-wrap {
+        width: 98px;
+        height: 94px;
+        margin: 0;
+    }
+
+    .reviews-slide-text {
+        width: 300px;
+        float: right;
+    }
+
+    .reviews-slide-text__name {
+        font-size: 18px;
+    }
+
+    .reviews-slide-text-info {
+        margin-bottom: 20px;
+    }
+
+    .reviews-slide-text-info__age {
+        font-size: 14px;
+    }
+
+    .reviews-slide-text__review {
+        height: 80px;
+        overflow: hidden;
+        display: inline-block;
+        line-height: 20px;
+    }
+
+    .reviews-slider__prev, .reviews-slider__next {
+        width: 14px;
+        height: 24px;
+        background-size: 14px;
+    }
+
+    .reviews-slider__prev:hover, .reviews-slider__next:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+
+    .reviews-slider__prev {
+        left: -60px;
+    }
+
+    .reviews-slider__next {
+        right: -60px;
+    }
+
 }
 
 @media all and (max-width: 1140px) {
@@ -1607,6 +1717,18 @@ input[type='radio'].visually-hidden {
         padding: 23px 60px;
     }
 
+    .lessons {
+        min-height: 2000px;
+    }
+
+    .lessons-block {
+        margin-bottom: 300px;
+    }
+
+    .lessons-block:last-child {
+        margin-bottom: 0;
+    }
+
 }
 
 @media all and (max-width: 998px) {
@@ -1623,6 +1745,33 @@ input[type='radio'].visually-hidden {
 
     .about {
         box-sizing: border-box;
+    }
+
+    .block1, .block3 {
+        margin-left: 60px;
+    }
+
+    .block1::after {
+        left: 350px;
+    }
+
+    .block2, .block4 {
+        margin-right: 0;
+    }
+
+    .block2::after {
+        left: -390px;
+    }
+
+    .block3::after {
+        top: -75px;
+        left: 230px;
+        width: 400px;
+        z-index: -1;
+    }
+
+    .lessons-block {
+        width: 300px;
     }
 
 }
@@ -1664,6 +1813,11 @@ input[type='radio'].visually-hidden {
         width: 315px;
     }
 
+    .block4::after {
+        left: -370px;
+        z-index: -1;
+    }
+
 }
 
 @media all and (max-width: 815px) {
@@ -1678,6 +1832,11 @@ input[type='radio'].visually-hidden {
         -webkit-background-size: contain;
         background-size: contain;
         background-position: 40px 30px;
+    }
+
+    .block1::after {
+        top: -165px;
+        left: 255px;
     }
 
 }
@@ -1712,6 +1871,7 @@ input[type='radio'].visually-hidden {
 
     .title {
         font-size: 24px;
+        font-weight: 500;
     }
 
     .about {
@@ -1763,10 +1923,6 @@ input[type='radio'].visually-hidden {
         margin: 0 auto 30px;
     }
 
-    /*.schedule-blocks__first, .schedule-blocks__second {*/
-        /*margin-right: 13px;*/
-    /*}*/
-
     .schedule-blocks__first::after, .schedule-blocks__second::after, .schedule-blocks__third::after {
         font-size: 115px;
         left: 55px;
@@ -1799,7 +1955,7 @@ input[type='radio'].visually-hidden {
     }
 
     .lessons {
-        min-height: 1415px;
+        min-height: 1525px;
     }
 
     .lessons-block {
@@ -1883,6 +2039,57 @@ input[type='radio'].visually-hidden {
         width: 210px;
     }
 
+    .block1::after {
+        left: 240px;
+    }
+
+    .block2::after {
+        left: -195px;
+    }
+
+    .block3::after {
+        left: 190px;
+    }
+
+    .block4::after {
+        left: -252px;
+    }
+
+    .reviews-slider {
+        width: 263px;
+        height: 322px;
+        margin-top: 30px;
+    }
+
+    .reviews-slide {
+        padding: 30px 15px 0;
+        text-align: center;
+    }
+
+    .reviews-slide-wrap {
+        float: none;
+        margin: 0 auto 15px;
+    }
+
+    .reviews-slide-text {
+        float: none;
+        width: auto;
+    }
+
+    .reviews-slide-text__name {
+        font-size: 16px;
+    }
+
+    .reviews-slide-text__review {
+        font-size: 14px;
+        height: 74px;
+        line-height: 18px;
+    }
+
+    .reviews-slide-text-info__age {
+        float: none;
+    }
+
 }
 
 @media all and (max-width: 656px) {
@@ -1939,6 +2146,46 @@ input[type='radio'].visually-hidden {
         top: 370px;
     }
 
+    .lessons-block {
+        float: none;
+        width: 260px;
+        margin: 0 auto 70px;
+    }
+
+    .lessons__title {
+        margin-bottom: 20px;
+    }
+
+    .lessons-block__title {
+        margin-bottom: 320px;
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .block1::after {
+        top: 15px;
+        left: 0;
+    }
+
+    .block2::after {
+        top: -43px;
+        left: 20px;
+        z-index: -1;
+    }
+
+    .block3::after {
+        top: 55px;
+        left: -16px;
+    }
+
+    .block4::after {
+        top: 48px;
+        left: -42px;
+    }
+
 }
 
 @media all and (max-width: 550px) {
@@ -1984,10 +2231,17 @@ input[type='radio'].visually-hidden {
 
     .title {
         font-size: 18px;
+        padding-left: 25px;
+        font-weight: 500;
     }
 
     .text {
         font-size: 14px;
+    }
+
+    .title::before {
+        width: 17px;
+        height: 1px;
     }
 
     .about__btn {
@@ -2059,5 +2313,11 @@ input[type='radio'].visually-hidden {
     .schedule-title {
         font-size: 15px;
     }
+
+    .lessons-block__title {
+        font-size: 14px;
+    }
+
+
 
 }

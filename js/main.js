@@ -77,7 +77,15 @@ $(document).ready(function() {
     //         infinite: true,
     //         dots: true,
     //         // autoplay: true,
-    //         autoplaySpeed: 3000
+    //         autoplaySpeed: 3000,
+    //             responsive: [
+    //                 {
+    //                     breakpoint: 700,
+    //                     settings: {
+    //                         arrows: false
+    //                     }
+    //                 }
+    //             ]
     //     });
     // }
 
