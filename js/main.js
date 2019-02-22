@@ -51,6 +51,9 @@ $(document).ready(function() {
 
         if($('.paginator-list a').hasClass('paginator-link--active')) {
             $('.paginator-span').toggleClass('.paginator-span--nonactive');
+            $(this).children().css('display', 'none');
+        } else {
+            $(this).children().css('display', 'block');
         }
 
         $("html, body").animate({
@@ -68,26 +71,26 @@ $(document).ready(function() {
     });
 
     //reviews-slider слайдер
-    // if($('.reviews-slider') && $('.reviews-slider').length > 0) {
-    //     $('.reviews-slider').slick({
-    //         arrows: true,
-    //         prevArrow: '<a href="#" class="reviews-slider__prev"></a>',
-    //         nextArrow: '<a href="#" class="reviews-slider__next"></a>',
-    //         appendDots: $('.reviews-slider-dots'),
-    //         infinite: true,
-    //         dots: true,
-    //         // autoplay: true,
-    //         autoplaySpeed: 3000,
-    //             responsive: [
-    //                 {
-    //                     breakpoint: 700,
-    //                     settings: {
-    //                         arrows: false
-    //                     }
-    //                 }
-    //             ]
-    //     });
-    // }
+    if($('.reviews-slider') && $('.reviews-slider').length > 0) {
+        $('.reviews-slider').slick({
+            arrows: true,
+            prevArrow: '<a href="#" class="reviews-slider__prev"></a>',
+            nextArrow: '<a href="#" class="reviews-slider__next"></a>',
+            appendDots: $('.reviews-slider-dots'),
+            infinite: true,
+            dots: true,
+            // autoplay: true,
+            autoplaySpeed: 3000,
+                responsive: [
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
+        });
+    }
 
     //карта яндекс
     ymaps.ready(init);
@@ -105,18 +108,5 @@ $(document).ready(function() {
         });
         myMap.geoObjects.add(myPlacemark);
     }
-
-    function factorial(n) {
-        var result = 0;
-        if (n > 1) {
-            result = n * factorial(n-1);
-            return result;
-        } else {
-            return 1;
-        }
-    }
-    factorial(10);
-
-
 
 });
