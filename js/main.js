@@ -58,20 +58,22 @@ $(document).ready(function() {
     });
 
     //paginator
-    $('.paginator-list a').on('click', function() {
-        var elementClick = String($(this).attr("href")),
-               destination = $(elementClick).offset().top;
+    if($('.paginator-list a')) {
+        $('.paginator-list a').on('click', function() {
+            var elementClick = String($(this).attr("href")),
+                destination = $(elementClick).offset().top;
 
-        $('.paginator-list a').removeClass('paginator-link--active').addClass('paginator-link paginator-link__dot');
-        $(this).addClass('paginator-link--active').removeClass('paginator-link__dot paginator-link');
-        $('.paginator-span').addClass('paginator-span--nonactive');
-        $(this).children('.paginator-span').removeClass('paginator-span--nonactive');
+            $('.paginator-list a').removeClass('paginator-link--active').addClass('paginator-link paginator-link__dot');
+            $(this).addClass('paginator-link--active').removeClass('paginator-link__dot paginator-link');
+            $('.paginator-span').addClass('paginator-span--nonactive');
+            $(this).children('.paginator-span').removeClass('paginator-span--nonactive');
 
 
-        $("html, body").animate({
-            scrollTop: destination
-        }, 800);
-    });
+            $("html, body").animate({
+                scrollTop: destination
+            }, 800);
+        });
+    }
 
     //скролл пагинатора
     $(document).on("scroll", onScroll);
