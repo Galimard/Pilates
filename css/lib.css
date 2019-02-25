@@ -3807,11 +3807,11 @@ input[type='radio'].visually-hidden {
 }
 
 .button__arrow:hover::after {
-    -webkit-transform: translateX(30px);
-    -moz-transform: translateX(30px);
-    -ms-transform: translateX(30px);
-    -o-transform: translateX(30px);
-    transform: translateX(30px);
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px);
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
     -ms-transition: transform 0.3s ease;
@@ -3954,23 +3954,22 @@ input[type='radio'].visually-hidden {
 }
 /*-----------------------------------------------------------------paginator-------------------------------------------------------------*/
 
-.paginator {
+.template-shadow--paginator {
+    width: 1366px;
+    margin: 0 auto;
     position: fixed;
+    height: 1px;
     top: 50vh;
-    width: 100%;
-    height: 0;
-    /*top: 235px;*/
-    /*right: 40px;*/
-    z-index: 10;
+    z-index: 100;
 }
 
 .paginator-list {
-    position: fixed;
-    top: 0;
-    right: 200px;
-    /*top: 50vh;*/
-    /*right: 40px;*/
-    -webkit-transform: translateY(-50%);
+    position: relative;
+}
+
+.paginator-list__inner {
+    position: absolute;
+    right: 40px;
     transform: translateY(-50%);
 }
 
@@ -4037,11 +4036,6 @@ input[type='radio'].visually-hidden {
     position: absolute;
     right: 0;
     z-index: -1;
-    /*-webkit-transform: scale(-1, 1);*/
-    /*-moz-transform: scale(-1, 1);*/
-    /*-ms-transform: scale(-1, 1);*/
-    /*-o-transform: scale(-1, 1);*/
-    /*transform: scale(-1, 1);*/
 }
 
 .header__circle-middle {
@@ -4052,25 +4046,6 @@ input[type='radio'].visually-hidden {
     left: 760px;
     top: 20%;
     z-index: -2;
-    /*animation: move 3s infinite linear;*/
-}
-
-@keyframes move {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(10px, 0);
-    }
-    50% {
-        transform: translate(10px, 10px);
-    }
-    75% {
-        transform: translate(0, 10px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
 }
 
 .header-top {
@@ -4110,24 +4085,20 @@ input[type='radio'].visually-hidden {
     height: 21px;
     vertical-align: middle;
     margin: 0 auto;
+    cursor: pointer;
 }
 
-.header-top__cross:hover {
-    -webkit-transform: rotate(180deg) translateY(3px);
-    -moz-transform: rotate(180deg) translateY(3px);
-    -ms-transform: rotate(180deg) translateY(3px);
-    -o-transform: rotate(180deg) translateY(3px);
-    transform: rotate(180deg) translateY(3px);
-    -webkit-transition: transform 0.5s ease;
-    -moz-transition: transform 0.5s ease;
-    -ms-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
+.header-top__cross:hover .burger-line{
+    background-color: #a9b68d;
+    -webkit-transition: background-color 0.5s ease, transform 0.5s ease;
+    -moz-transition: background-color 0.5s ease, transform 0.5s ease;
+    -ms-transition: background-color 0.5s ease, transform 0.5s ease;
+    -o-transition: background-color 0.5s ease, transform 0.5s ease;
+    transition: background-color 0.3s ease, transform 0.5s ease;
 }
 
 .burger-line {
     display: block;
-    cursor: pointer;
     height: 2px;
     width: 100%;
     background-color: #ffffff;
@@ -4150,13 +4121,13 @@ input[type='radio'].visually-hidden {
 .burger-line2:first-child {
     position: absolute;
     top: 7px;
+    width: 100%;
     transform: rotate(45deg);
     -webkit-transition: transform 0.5s ease;
     -moz-transition: transform 0.5s ease;
     -ms-transition: transform 0.5s ease;
     -o-transition: transform 0.5s ease;
     transition: transform 0.5s ease;
-    width: 100%;
 }
 
 .burger-line2:last-child {
@@ -4872,7 +4843,7 @@ input[type='radio'].visually-hidden {
 
 @media all and (max-width: 1370px) {
 
-    .button__arrow::after {
+    .schedule-blocks .button__arrow::after {
         width: 32px;
         background: url("../images/arrow-long.png") right center no-repeat;
         top: 9px;
